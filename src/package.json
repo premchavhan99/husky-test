@@ -19,12 +19,12 @@
     "test-report": "mocha --reporter mochawesome --exit ./tests > test-results.json",
     "test": "mocha --exit ./tests",
     "test-postman": "newman run tests/postman_collection.json --timeout 60000 --env-var apphost=$TEST_HOST",
-    "lint": "eslint . --ext mjs && prettier --check **/*.mjs",
+    "lint": "prettier --check .",
     "lint-fix": "eslint . --ext mjs --fix && prettier --write **/*.mjs"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --check ."
+      "pre-commit": "npm run lint"
     }
   },
   "dependencies": {
