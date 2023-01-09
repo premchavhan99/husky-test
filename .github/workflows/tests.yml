@@ -18,7 +18,6 @@ jobs:
       - run: |
           cd src
           npm install --ignore-scripts
-      - name: NPM run lint
-        run: npm run lint
+          npm run lint
       - name: Tests
         run: echo "All tests are passed"
