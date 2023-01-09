@@ -22,6 +22,11 @@
     "lint": "eslint . --ext mjs && prettier --check **/*.mjs",
     "lint-fix": "eslint . --ext mjs --fix && prettier --write **/*.mjs"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --check ."
+    }
+  },
   "dependencies": {
     "@azure/msal-node": "^1.14.1",
     "applicationinsights": "^2.3.5",
@@ -33,6 +38,7 @@
     "express": "~4.18.1",
     "express-prometheus-middleware": "^1.2.0",
     "express-session": "^1.17.3",
+    "husky": "^8.0.3",
     "mongodb": "^4.9.1",
     "morgan": "~1.10.0",
     "redis": "^4.3.1"
@@ -44,7 +50,7 @@
     "mochawesome": "^7.1.3",
     "newman": "^5.3.2",
     "nodemon": "^2.0.19",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.2",
     "supertest": "^6.2.4"
   }
 }
