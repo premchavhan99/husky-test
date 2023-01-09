@@ -16,6 +16,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           node-version: "14.15.1"
       - run: |
+          cd src
           npm install --ignore-scripts
       - name: NPM run lint
         run: npm run lint
