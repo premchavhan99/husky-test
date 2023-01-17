@@ -1,8 +1,8 @@
 name: Tests
 
 on:
-  push:
-    branches-ignore: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
@@ -19,5 +19,6 @@ jobs:
           cd src
           npm install --ignore-scripts
           npm run lint
+          npm run lint-fix
       - name: Tests
         run: echo "All tests are passed"

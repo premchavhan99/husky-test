@@ -19,8 +19,8 @@
     "test-report": "mocha --reporter mochawesome --exit ./tests > test-results.json",
     "test": "mocha --exit ./tests",
     "test-postman": "newman run tests/postman_collection.json --timeout 60000 --env-var apphost=$TEST_HOST",
-    "lint": "prettier --check .",
-    "lint-fix": "eslint . --ext mjs --fix && prettier --write **/*.mjs"
+    "lint": "prettier --check {,*/**/}*.{mjs,js,jsx,json}",
+    "lint-fix": "eslint . --ext js --fix && prettier --write **/*.{js,mjs,sjson}"
   },
   "husky": {
     "hooks": {
