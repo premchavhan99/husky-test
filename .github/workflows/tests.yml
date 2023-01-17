@@ -17,8 +17,9 @@ jobs:
           node-version: "14.15.1"
       - run: |
           cd src
-          npm install --ignore-scripts
+          npm install 
           npm run lint
           npm run lint-fix
+          npm run test
       - name: Tests
         run: echo "All tests are passed"

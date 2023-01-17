@@ -3,7 +3,13 @@ console.log = function () {}
 import request from 'supertest'
 import app from '../server.mjs'
 
-describe('Check home page', function () {
+
+
+
+
+
+
+        describe('Check home page', function () {
   it('Responds with 200 & HTML', function (done) {
     request(app)
       .get('/')
