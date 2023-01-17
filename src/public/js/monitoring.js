@@ -12,14 +12,6 @@ function startMonitoring() {
   // Initialize working set chart
   /* global Chart:false */
 
- 
- 
- 
- 
- 
- 
- 
- 
   memChart = new Chart(document.getElementById('memChart'), {
     type: 'line',
 
