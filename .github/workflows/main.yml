@@ -7,7 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: dev
-
     steps:
       - run: |
           sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
