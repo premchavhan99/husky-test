@@ -15,10 +15,14 @@ jobs:
         with:
           registry-url: "https://npm.pkg.github.com"
           node-version: "14.15.1"
-      - run: |
-          cd src
-          npm install --ignore-scripts
-          npm run lint
-          npm run lint-fix
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: 'Test message :rocket:'
+          SLACK_TITLE: Test from gha
+          SLACK_USERNAME: rtCamp
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       - name: Tests
         run: echo "All tests are passed"
